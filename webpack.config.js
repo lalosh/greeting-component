@@ -1,5 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const nodeExternals = require('webpack-node-externals');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
@@ -10,7 +12,13 @@ const htmlWebpackPlugin = new HtmlWebpackPlugin({
 
 
 module.exports = {
-    entry: path.join(__dirname, "src/index.jsx"),
+    entry: path.join(__dirname, "src/index.js"),
+    output: {
+        filename: 'index.js',
+        path: path.resolve(__dirname, 'dist'),
+        library: 'greeting-component',
+        libraryTarget: 'commonjs'
+    },
     module: {
         rules: [
             {
@@ -24,6 +32,9 @@ module.exports = {
             }
         ]
     },
+    plugins: [new CleanWebpackPlugin()],
+    externals: [nodeExternals()],
+
     // plugins: [htmlWebpackPlugin],
     resolve: {
         extensions: [".js", ".jsx"]
