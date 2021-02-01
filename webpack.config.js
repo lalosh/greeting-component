@@ -10,7 +10,7 @@ const htmlWebpackPlugin = new HtmlWebpackPlugin({
 
 
 module.exports = {
-    entry: path.join(__dirname, "examples/index.js"),
+    entry: path.join(__dirname, "src/index.jsx"),
     module: {
         rules: [
             {
@@ -24,11 +24,11 @@ module.exports = {
             }
         ]
     },
-    plugins: [htmlWebpackPlugin],
+    // plugins: [htmlWebpackPlugin],
     resolve: {
         extensions: [".js", ".jsx"]
     },
-    devServer: {
-        port: 3001
-    }
+    // devServer: {
+    //     port: 3001
+    // }
 };
