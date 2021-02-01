@@ -1,5 +1,5 @@
 {
-  "name": "greeting-component",
+  "name": "@lalosh/greeting-component",
   "version": "1.0.0",
   "description": "",
   "main": "dist/main.js",
