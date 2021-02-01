@@ -12,7 +12,7 @@ const htmlWebpackPlugin = new HtmlWebpackPlugin({
 
 
 module.exports = {
-    entry: path.join(__dirname, "src/index.js"),
+    entry: path.join(__dirname, "src/greet.jsx"),
     output: {
         filename: 'index.js',
         path: path.resolve(__dirname, 'dist'),
