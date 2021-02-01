@@ -16,7 +16,7 @@ module.exports = {
     output: {
         filename: 'index.js',
         path: path.resolve(__dirname, 'dist'),
-        library: 'greeting-component',
+        library: 'GreetMe',
         libraryTarget: 'commonjs'
     },
     module: {
